@@ -28,9 +28,6 @@ class MainActivity : AppCompatActivity() {
         binding.button6.setOnClickListener {
             drawerLayout.close()
             val i = Intent(this, AboutActivity::class.java)
-            i.apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            }
             startActivity(i)
         }
 

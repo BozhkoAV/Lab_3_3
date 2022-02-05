@@ -17,18 +17,18 @@ class ThirdActivity : AppCompatActivity() {
         binding.button4.setOnClickListener {
             val i = Intent(this, MainActivity::class.java)
             // Если убрать этот флаг,
-            // то в Task'е всё равно останется только первая Activity,
-            // так как для второй launchMode=singleTask
-            i.apply {
+            // то всё равно останется только одна MainActivity,
+            // так как для неё launchMode=singleTask
+            /*i.apply {
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            }
+            }*/
             startActivity(i)
         }
         binding.button5.setOnClickListener {
             val i = Intent(this, SecondActivity::class.java)
             // Если убрать этот флаг,
-            // то вторая Activity откроется поверх третьей,
-            // так как для второй launchMode=singleTop
+            // то SecondActivity откроется поверх третьей (в Back Stack будет две SecondActivity),
+            // так как для неё launchMode=singleTop
             i.apply {
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
@@ -44,9 +44,6 @@ class ThirdActivity : AppCompatActivity() {
         binding.button8.setOnClickListener {
             drawerLayout.close()
             val i = Intent(this, AboutActivity::class.java)
-            i.apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            }
             startActivity(i)
         }
 
