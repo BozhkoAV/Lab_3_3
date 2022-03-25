@@ -11,7 +11,7 @@ class AboutActivity : AppCompatActivity() {
 
         val binding = ActivityAboutBinding.inflate(this.layoutInflater)
 
-        binding.button9.setOnClickListener {
+        binding.bnToThird.setOnClickListener {
             val i = Intent(this, ThirdActivity::class.java)
             i.apply {
                 flags = Intent.FLAG_ACTIVITY_SINGLE_TOP

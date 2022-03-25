@@ -14,11 +14,11 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = SecondActivityBinding.inflate(this.layoutInflater)
-        binding.button.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
-        binding.button2.setOnClickListener {
+        binding.bnToThird.setOnClickListener {
             val i = Intent(this, ThirdActivity::class.java)
             startActivity(i)
         }
@@ -29,7 +29,7 @@ class SecondActivity : AppCompatActivity() {
             onOptionsItemSelected(it)
         }
 
-        binding.button7.setOnClickListener {
+        binding.bnToAbout.setOnClickListener {
             drawerLayout.close()
             val i = Intent(this, AboutActivity::class.java)
             startActivity(i)

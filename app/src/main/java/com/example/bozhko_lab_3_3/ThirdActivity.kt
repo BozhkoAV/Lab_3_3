@@ -14,7 +14,7 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = ThirdActivityBinding.inflate(this.layoutInflater)
-        binding.button4.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             val i = Intent(this, MainActivity::class.java)
             // Если убрать этот флаг,
             // то всё равно останется только одна MainActivity,
@@ -24,7 +24,7 @@ class ThirdActivity : AppCompatActivity() {
             }*/
             startActivity(i)
         }
-        binding.button5.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             val i = Intent(this, SecondActivity::class.java)
             // Если убрать этот флаг,
             // то SecondActivity откроется поверх третьей (в Back Stack будет две SecondActivity),
@@ -41,7 +41,7 @@ class ThirdActivity : AppCompatActivity() {
             onOptionsItemSelected(it)
         }
 
-        binding.button8.setOnClickListener {
+        binding.bnToAbout.setOnClickListener {
             drawerLayout.close()
             val i = Intent(this, AboutActivity::class.java)
             startActivity(i)

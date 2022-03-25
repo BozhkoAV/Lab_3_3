@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityMainBinding.inflate(this.layoutInflater)
-        binding.button3.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             val i = Intent(this, SecondActivity::class.java)
             startActivity(i)
         }
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             onOptionsItemSelected(it)
         }
 
-        binding.button6.setOnClickListener {
+        binding.bnToAbout.setOnClickListener {
             drawerLayout.close()
             val i = Intent(this, AboutActivity::class.java)
             startActivity(i)
